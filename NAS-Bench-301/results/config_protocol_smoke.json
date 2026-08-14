@@ -1,0 +1,157 @@
+{
+  "method": "GDETS-CDENAG-Proxy",
+  "benchmark": "NAS-Bench-301",
+  "experiment_label": "cifar10",
+  "protocol": {
+    "config_driven": true,
+    "seed_mode": "random",
+    "search_uses_historical_teacher": false,
+    "search_uses_sats": false
+  },
+  "config": {
+    "population_size": 6,
+    "denoising_steps": 1,
+    "selection_temperature": 0.15,
+    "elite_fraction": 0.2,
+    "diversity_fraction": 0.2,
+    "use_fitness_posterior": true,
+    "use_constraint_projection": true,
+    "use_diversity_reservation": true,
+    "tabu_last_steps": 2,
+    "tabu_seeds": 2,
+    "tabu_iterations": 1,
+    "tabu_tenure": 5,
+    "tabu_neighbors": 6,
+    "resample_attempts": 8,
+    "max_unique_proxy_calls": 80,
+    "seed": 0
+  },
+  "summary": {
+    "number_of_runs": 2,
+    "seed_mode": "random",
+    "seeds": [
+      1776385957,
+      1776385974
+    ],
+    "average_max_accuracy": 94.06500244140625,
+    "std_max_accuracy": 0.23334653254274693,
+    "average_duration_seconds": 0.009791851043701172,
+    "average_final_population_uniqueness_rate": 1.0,
+    "accuracy_semantics": "NAS-Bench-301 table accuracy"
+  },
+  "runs": [
+    {
+      "seed": 1776385957,
+      "best": {
+        "gene": [
+          6,
+          6,
+          6,
+          8
+        ],
+        "architecture": "((0, 3), (1, 2), (0, 5), (2, 6))",
+        "rank": 1,
+        "search_metric_name": "NAS-Bench-301 table accuracy",
+        "search_metric": 93.9000015258789,
+        "search_fitness": 682.7496948242188
+      },
+      "final_evaluation": null,
+      "benchmark_metric": 93.9000015258789,
+      "benchmark_metric_name": "NAS-Bench-301 table accuracy",
+      "duration_seconds": 0.009464263916015625,
+      "final_population_uniqueness_rate": 1.0,
+      "proxy": {
+        "backend": "CDENAG utils.fitness.arch_fitness (zc_nasbench301 lookup)",
+        "query_backed": true,
+        "unique_proxy_calls": 23,
+        "proxy_batch_calls": 4,
+        "max_unique_proxy_calls": 80,
+        "source_functions": [
+          "utils.NB301.get_api",
+          "utils.fitness.neural_predictor",
+          "utils.fitness.arch_fitness"
+        ],
+        "benchmark_queries_during_search": 23
+      },
+      "history": [
+        {
+          "mutation_attempts": 8,
+          "raw_valid_rate": 0.875,
+          "repair_rate": 0.125,
+          "rejected_invalid_rate": 0.0,
+          "duplicate_rate": 0.25,
+          "mean_repair_distance": 1.0,
+          "reverse_timestep": 1,
+          "completed_step": 1,
+          "population_size": 6,
+          "best_reported_metric": 93.9000015258789,
+          "best_original_fitness": 682.7496948242188,
+          "best_utility": 682.7496948242188,
+          "unique_proxy_calls": 23,
+          "tabu_seeds_refined": 2,
+          "tabu_gain": 15.224853515625,
+          "historical_teacher_used": false,
+          "sats_used": false
+        }
+      ],
+      "denoising_steps_completed": 1
+    },
+    {
+      "seed": 1776385974,
+      "best": {
+        "gene": [
+          6,
+          5,
+          12,
+          12
+        ],
+        "architecture": "((0, 3), (1, 4), (0, 3), (2, 1))",
+        "rank": 1,
+        "search_metric_name": "NAS-Bench-301 table accuracy",
+        "search_metric": 94.2300033569336,
+        "search_fitness": 700.0748901367188
+      },
+      "final_evaluation": null,
+      "benchmark_metric": 94.2300033569336,
+      "benchmark_metric_name": "NAS-Bench-301 table accuracy",
+      "duration_seconds": 0.010119438171386719,
+      "final_population_uniqueness_rate": 1.0,
+      "proxy": {
+        "backend": "CDENAG utils.fitness.arch_fitness (zc_nasbench301 lookup)",
+        "query_backed": true,
+        "unique_proxy_calls": 22,
+        "proxy_batch_calls": 4,
+        "max_unique_proxy_calls": 80,
+        "source_functions": [
+          "utils.NB301.get_api",
+          "utils.fitness.neural_predictor",
+          "utils.fitness.arch_fitness"
+        ],
+        "benchmark_queries_during_search": 22
+      },
+      "history": [
+        {
+          "mutation_attempts": 8,
+          "raw_valid_rate": 0.875,
+          "repair_rate": 0.125,
+          "rejected_invalid_rate": 0.0,
+          "duplicate_rate": 0.25,
+          "mean_repair_distance": 1.0,
+          "reverse_timestep": 1,
+          "completed_step": 1,
+          "population_size": 6,
+          "best_reported_metric": 94.2300033569336,
+          "best_original_fitness": 700.0748901367188,
+          "best_utility": 700.0748901367188,
+          "unique_proxy_calls": 22,
+          "tabu_seeds_refined": 2,
+          "tabu_gain": 28.34967041015625,
+          "historical_teacher_used": false,
+          "sats_used": false
+        }
+      ],
+      "denoising_steps_completed": 1
+    }
+  ],
+  "log_file": "logs\\GDETS_exp_cifar10_random_20260810_143210.txt"
+}

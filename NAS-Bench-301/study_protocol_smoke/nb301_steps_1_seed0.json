@@ -1,0 +1,163 @@
+{
+  "method": "GDETS-CDENAG-Proxy",
+  "benchmark": "NAS-Bench-301",
+  "context": {
+    "dataset": "cifar10",
+    "table": "C:\\Users\\19369\\Documents\\Codex\\2026-08-09\\memetic-computing\\work\\CDENAG-GDETS-v6\\NAS-Bench-301\\zc_nasbench301.json"
+  },
+  "method_boundary": {
+    "retained_original_proxy": true,
+    "historical_teacher": false,
+    "ema_consistency": false,
+    "stability_aware_tournament": false,
+    "categorical_graph_diffusion": true,
+    "tabu_local_optimization": true
+  },
+  "config": {
+    "population_size": 6,
+    "denoising_steps": 1,
+    "selection_temperature": 0.15,
+    "elite_fraction": 0.2,
+    "diversity_fraction": 0.2,
+    "use_fitness_posterior": true,
+    "use_constraint_projection": true,
+    "use_diversity_reservation": true,
+    "tabu_last_steps": 2,
+    "tabu_seeds": 2,
+    "tabu_iterations": 6,
+    "tabu_tenure": 5,
+    "tabu_neighbors": 32,
+    "resample_attempts": 8,
+    "max_unique_proxy_calls": 80,
+    "seed": 0
+  },
+  "proxy": {
+    "backend": "CDENAG utils.fitness.arch_fitness (zc_nasbench301 lookup)",
+    "query_backed": true,
+    "unique_proxy_calls": 73,
+    "proxy_batch_calls": 5,
+    "max_unique_proxy_calls": 80,
+    "source_functions": [
+      "utils.NB301.get_api",
+      "utils.fitness.neural_predictor",
+      "utils.fitness.arch_fitness"
+    ],
+    "benchmark_queries_during_search": 73
+  },
+  "best": {
+    "gene": [
+      6,
+      0,
+      8,
+      8
+    ],
+    "architecture": "((0, 3), (1, 5), (0, 2), (2, 6))",
+    "rank": 1,
+    "search_metric_name": "NAS-Bench-301 table accuracy",
+    "search_metric": 93.86000061035156,
+    "search_fitness": 680.649658203125
+  },
+  "ranked_top_k": [
+    {
+      "gene": [
+        6,
+        0,
+        8,
+        8
+      ],
+      "architecture": "((0, 3), (1, 5), (0, 2), (2, 6))",
+      "rank": 1,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.86000061035156,
+      "search_fitness": 680.649658203125
+    },
+    {
+      "gene": [
+        6,
+        2,
+        8,
+        6
+      ],
+      "architecture": "((0, 3), (1, 3), (0, 2), (2, 3))",
+      "rank": 2,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.81999969482422,
+      "search_fitness": 678.5496826171875
+    },
+    {
+      "gene": [
+        3,
+        0,
+        11,
+        8
+      ],
+      "architecture": "((0, 5), (1, 5), (1, 4), (2, 6))",
+      "rank": 3,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.69000244140625,
+      "search_fitness": 671.724853515625
+    },
+    {
+      "gene": [
+        6,
+        0,
+        8,
+        3
+      ],
+      "architecture": "((0, 3), (1, 5), (0, 2), (2, 0))",
+      "rank": 4,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.56999969482422,
+      "search_fitness": 665.4248657226562
+    },
+    {
+      "gene": [
+        6,
+        0,
+        8,
+        6
+      ],
+      "architecture": "((0, 3), (1, 5), (0, 2), (2, 3))",
+      "rank": 5,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.52999877929688,
+      "search_fitness": 663.3248291015625
+    },
+    {
+      "gene": [
+        3,
+        2,
+        11,
+        6
+      ],
+      "architecture": "((0, 5), (1, 3), (1, 4), (2, 3))",
+      "rank": 6,
+      "search_metric_name": "NAS-Bench-301 table accuracy",
+      "search_metric": 93.41000366210938,
+      "search_fitness": 657.02490234375
+    }
+  ],
+  "history": [
+    {
+      "mutation_attempts": 13,
+      "raw_valid_rate": 0.6923076923076923,
+      "repair_rate": 0.3076923076923077,
+      "rejected_invalid_rate": 0.0,
+      "duplicate_rate": 0.5384615384615384,
+      "mean_repair_distance": 1.0,
+      "reverse_timestep": 1,
+      "completed_step": 1,
+      "population_size": 6,
+      "best_reported_metric": 93.86000061035156,
+      "best_original_fitness": 680.649658203125,
+      "best_utility": 680.649658203125,
+      "unique_proxy_calls": 73,
+      "tabu_seeds_refined": 0,
+      "tabu_gain": 0.0,
+      "historical_teacher_used": false,
+      "sats_used": false
+    }
+  ],
+  "denoising_steps_completed": 1,
+  "elapsed_seconds": 0.020685195922851562
+}

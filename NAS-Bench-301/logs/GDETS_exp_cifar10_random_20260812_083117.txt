@@ -1,0 +1,33 @@
+>>> Running experiment with dataset: cifar10
+>>> Logs will be saved to: /tmp/GDETS/NAS-Bench-301/logs/GDETS_exp_cifar10_random_20260812_083117.txt
+>>> Seed source: config.py (random seed list)
+>>> Effective evaluator backend: CDENAG utils.fitness.arch_fitness (zc_nasbench301 lookup)
+
+>>> Exp 0: Running on cifar10 dataset with seed 1776386016...
+>>> Search metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Final benchmark metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Duration: 0.79 seconds; final uniqueness rate: 1.00
+
+>>> Exp 1: Running on cifar10 dataset with seed 1776386043...
+>>> Search metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Final benchmark metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Duration: 0.81 seconds; final uniqueness rate: 1.00
+
+>>> Exp 2: Running on cifar10 dataset with seed 1776386075...
+>>> Search metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Final benchmark metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Duration: 0.75 seconds; final uniqueness rate: 1.00
+
+>>> Exp 3: Running on cifar10 dataset with seed 1776386081...
+>>> Search metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Final benchmark metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Duration: 0.78 seconds; final uniqueness rate: 1.00
+
+>>> Exp 4: Running on cifar10 dataset with seed 1776386117...
+>>> Search metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Final benchmark metric (NAS-Bench-301 table accuracy): 94.69000244
+>>> Duration: 0.83 seconds; final uniqueness rate: 1.00
+
+>>> In 5 random seed experiment on cifar10 dataset, average selected benchmark/task metric is 94.69, average duration is 0.79 seconds, average uniqueness rate is 1.00.
+>>> Accuracy semantics: NAS-Bench-301 table accuracy (not the proxy prediction).
+>>> Result written to /tmp/GDETS/NAS-Bench-301/results/gdets_run.json
